@@ -30,7 +30,7 @@ const App = () => {
 
   useEffect(() => {
     if (authUser) {
-      const newSocket = io("http://localhost:8080", {
+      const newSocket = io(import.meta.env.VITE_BACKEND_URL, {
         query: {
           userId: authUser._id,
         },
