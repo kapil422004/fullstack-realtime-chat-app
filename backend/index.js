@@ -5,12 +5,11 @@ import cors from "cors";
 import dbconnect from "./config/database.js";
 import userRouter from "./routes/userRoute.js";
 import messageRouter from "./routes/messageRoute.js";
-
-const app = express();
+import { app, server } from "./socket/socket.js";
 
 const PORT = process.env.PORT || 4000;
 
-const allowOrigin = ["http://localhost:8080"];
+const allowOrigin = ["http://localhost:5173"];
 
 app.use(
   cors({
@@ -26,11 +25,11 @@ app.get("/", (req, res) => {
   res.send("Hello");
 });
 
-app.use("/api/v1/user", userRouter)
-app.use("/api/v1/message", messageRouter)
+app.use("/api/v1/user", userRouter);
+app.use("/api/v1/message", messageRouter);
 
-dbconnect()
+dbconnect();
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`server is live on ${PORT}`);
 });

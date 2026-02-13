@@ -28,8 +28,8 @@ export const register = async (req, res) => {
 
     const hashPassword = await bcrypt.hash(password, 10);
 
-    const maleProfilePhoto = `https://avatar.iran.liara.run/public/boy?username=${userName}`;
-    const femaleProfilePhoto = `https://avatar.iran.liara.run/public/girl?username=${userName}`;
+    const maleProfilePhoto = `https://api.dicebear.com/7.x/bottts-neutral/svg?seed=${userName}&flip=true`;
+    const femaleProfilePhoto = `https://api.dicebear.com/7.x/bottts-neutral/svg?seed=${userName}&flip=true`;
 
     const user = await User.create({
       fullName,

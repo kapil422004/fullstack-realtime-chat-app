@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+  font-family: "Roboto Mono", monospace;
+}
+
+@import "tailwindcss";
+@plugin "daisyui";  
+
+body{
+background: url(/bg.png);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
