@@ -7,14 +7,19 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "https://fullstack-realtime-chat-app-steel.vercel.app",
+      "https://fullstack-realtime-chat-app-git-main-kapil-ishwarkars-projects.vercel.app",
+      "https://fullstack-realtime-chat-rlqlmauvy-kapil-ishwarkars-projects.vercel.app",
+    ],
     methods: ["GET", "POST"],
   },
 });
 
-export const getReceiverSocketId = (receiverId) =>{
-    return userSocketMap[receiverId]
-}
+export const getReceiverSocketId = (receiverId) => {
+  return userSocketMap[receiverId];
+};
 
 const userSocketMap = {};
 

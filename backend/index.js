@@ -11,9 +11,9 @@ const PORT = process.env.PORT || 4000;
 
 const allowOrigin = [
   "http://localhost:5173",
-  "fullstack-realtime-chat-app-pearl.vercel.app",
-  "fullstack-realtime-chat-app-git-main-kapil-ishwarkars-projects.vercel.app",
-  "fullstack-realtime-chat-9l23abh6a-kapil-ishwarkars-projects.vercel.app",
+  "https://fullstack-realtime-chat-app-steel.vercel.app",
+  "https://fullstack-realtime-chat-app-git-main-kapil-ishwarkars-projects.vercel.app",
+  "https://fullstack-realtime-chat-rlqlmauvy-kapil-ishwarkars-projects.vercel.app",
 ];
 
 app.use(
